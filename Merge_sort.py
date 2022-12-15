@@ -62,6 +62,9 @@ if __name__ == '__main__':
 
     array = [90, -1, 17, 4, 6, 101, -2]
 
+    print("Unsorted array")
     print_array(array)
+    print()
     merge_sorting(array)
+    print("Sorted array")
     print_array(array)
