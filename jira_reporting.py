@@ -17,7 +17,7 @@ jira = JIRA(options=jiraOptions, basic_auth=(
 file_path = 'Jira Report 1.txt'
 File = sys.stdout = open(file_path, "w")
 
-for singleIssue in jira.search_issues(jql_str='project = CISAMTSTAUTO AND created>=' + date):
+for singleIssue in jira.search_issues(jql_str='project = PERFECTPROJECT AND created>=' + date):
     print('{}{}{}{}{}{}'.format(50*'=', '\nKey: ' + singleIssue.key, '\nSummary: ' + singleIssue.fields.summary,
                                 '\nReporter: ' + singleIssue.fields.reporter.displayName, '\nStatus: ' +
                                 singleIssue.fields.status.name,
